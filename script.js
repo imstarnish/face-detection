@@ -9,6 +9,8 @@ faceapi.nets.ageGenderNet.loadFromUri('/models')
 ]).then(start)
 
 function start(){
+	const loader = document.getElementById('load');
+	loader.style.display = 'none';
 	const container = document.createElement('div');
 	container.style.position = 'relative';
 	document.body.append(container);

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Real-time Face Detection</title>
+  <script defer src="face-api.js"></script>
+  <script defer src="scriptrt.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+	  flex-direction : column;
+    }
+    canvas {
+      position: absolute;
+	  top: 0% !important;
+	  left: 0 !important;
+    }
+	video {
+		height : 560px;
+		width : 720px;
+	}
+	@media screen and (max-width: 600px) {
+	video {
+		height : 480px;
+		width : 240px;
+  }
+	#container{
+		position : relative;
+	}
+  </style>
+</head>
+<body>
+	<div id="load">Loading...</div>
+	<div id="container">
+	<video id="video" height="480px" width="240px" muted playsinline autoplay></video>
+	</div>
+	<button>Start</button>
+</body>
+</html>
